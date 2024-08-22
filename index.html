@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="utls.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="container flex py-2">
+        <div class="grid" id="gridBox">
+            <div class="tile flex justify-center align-center" id="tile1"></div>
+            <div class="tile flex justify-center align-center" id="tile2"></div>
+            <div class="tile flex justify-center align-center" id="tile3"></div>
+            <div class="tile flex justify-center align-center" id="tile4"></div>
+            <div class="tile flex justify-center align-center" id="tile5"></div>
+            <div class="tile flex justify-center align-center" id="tile6"></div>
+            <div class="tile flex justify-center align-center" id="tile7"></div>
+            <div class="tile flex justify-center align-center" id="tile8"></div>
+            <div class="tile flex justify-center align-center" id="tile9"></div>
+            <div class="tile flex justify-center align-center" id="tile10"></div>
+            <div class="tile flex justify-center align-center" id="tile11"></div>
+            <div class="tile flex justify-center align-center" id="tile12"></div>
+            <div class="tile flex justify-center align-center" id="tile13"></div>
+            <div class="tile flex justify-center align-center" id="tile14"></div>
+            <div class="tile flex justify-center align-center" id="tile15"></div>
+            <div class="tile flex justify-center align-center" id="tile16"></div>
+        </div>
+        <div class="other flex flex-column justify-space-evenly">
+            <div class="score">Score = </div>
+            <button class="mx-2" id="restart">Restart</button>
+            <div class="console position-relative">
+                <div id="up" class="position-absolute"><button class="btn" id="up"><span style="font-size: 3vw;" class="material-symbols-outlined">keyboard_arrow_up</span></button></div>
+                <div id="left" class="position-absolute"><button class="btn" id="left"><span  style="font-size: 3vw;"class="material-symbols-outlined">keyboard_arrow_left</span></button></div>
+                <div id="right" class="position-absolute"><button class="btn" id="right"><span style="font-size: 3vw;" class="material-symbols-outlined">keyboard_arrow_right</span></button></div>
+                <div id="down" class="position-absolute"><button class="btn" id="down"><span style="font-size: 3vw;" class="material-symbols-outlined">keyboard_arrow_down</span></button></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

@@ -1,0 +1,120 @@
+.flex{
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.justify-space-between{
+    justify-content: space-between;
+}
+
+.justify-space-evenly{
+    justify-content: space-evenly;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-item-center{
+    justify-self: center;
+}
+
+.align-item-center{
+    align-self: center;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.p-1{
+    padding: 1vw;
+}
+
+.p-2{
+    padding: 2vw;
+}
+
+.p-10px{
+    padding: 10px;
+}
+
+.px-1{
+    padding: 0 1vw;
+}
+
+.px-2{
+    padding: 0 2vw;
+}
+
+.py-2{
+    padding: 2vh 0;
+}
+
+.my-1{
+    margin: 1vh 0;
+}
+
+.my-2{
+    margin: 2vh 0;
+}
+
+.my-3{
+    margin: 3vh 0;
+}
+
+.mx-1{
+    margin: 0 1vw;
+}
+
+.mx-2{
+    margin: 0 2vw;
+}
+
+.mx-3{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.m-3{
+    margin: 3vw;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.position-relative{
+    position: relative;
+}
+
+.position-absolute{
+    position: absolute;
+}
+
+.opacity-low{
+    opacity: 0.7;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+.radius-10{
+    border-radius: 10px;
+}

@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: aqua;
+}
+
+.container {
+    background-color: yellow;
+    justify-content: space-evenly;
+}
+
+#gridBox {
+    grid-template-columns: repeat(4, 13vw);
+    grid-template-rows: repeat(4, 11.38vw);
+    grid-gap: 1px;
+}
+
+.tile {
+    background-color: grey;
+    border: 2px solid black;
+    font-size: 5vw;
+    border-radius: 2px;
+}
+
+.score {
+    background-color: orange;
+    color: white;
+    font-size: 2vw;
+    padding: 0.5vw;
+    border-radius: 1vw;
+}
+
+#restart {
+    width: 5vw;
+    font-size: 1vw;
+    background-color: violet;
+    border-radius: 1vw;
+    padding: 0.4vw;
+}
+
+.console {
+    width: 15vw;
+    height: 15vw;
+}
+
+.btn {
+    border-radius: 5vw;
+    background-color: red;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #c97f7f;
+    color: black;
+}
+
+#up {
+    right: 5.8vw;
+}
+
+#left {
+    top: 5.5vw;
+}
+
+#right {
+    top: 5.5vw;
+    right: 0;
+}
+
+#down {
+    bottom: 0;
+    right: 5.8vw;
+}
+
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.cyan {
+    background-color: cyan;
+    color: black;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.darkgoldenrod {
+    background-color: darkgoldenrod;
+    color: white;
+}
+
+.coral {
+    background-color: coral;
+}
+
+.cornflowerblue {
+    background-color: cornflowerblue;
+}
+
+.crimson {
+    background-color: crimson;
+}
+
+.lightgreen {
+    background-color: lightgreen;
+}
+
+.cornsilk {
+    background-color: cornsilk;
+}
+
+.darkgreen {
+    background-color: darkgreen;
+}
+
+.magenta {
+    background-color: magenta;
+}
+
+.grey {
+    background-color: grey;
+    color: black;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        padding: 2vw 20vw;
+    }
+
+    .score {
+        width: 10vw;
+        height: 2vw;
+    }
+
+    .other {
+        flex-direction: row;
+    }
+
+    #restart {
+        width: 6vw;
+        height: 3vw;
+    }
+
+    #gridBox {
+        padding: 2vw 0;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 3vw 7vw;
+    }
+
+    #gridBox {
+        grid-template-columns: repeat(4, 21vw);
+        grid-template-rows: repeat(4, 25.38vw);
+    }
+
+    .tile{
+        font-size: 8vw;
+    }
+    .score {
+        width: 20vw;
+        height: 4vw;
+        font-size: 2.7vw;
+    }
+
+    #restart {
+        width: 9vw;
+        height: 4vw;
+        font-size: 2vw;
+    }
+    span{
+        font-size: 4vw;
+    }
+}
