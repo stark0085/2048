@@ -2,6 +2,13 @@ let tile = Array.from(document.getElementsByClassName("tile"))
 let score = document.getElementsByClassName('score')[0]
 let points = 0
 score.innerHTML = 'Score = ' + points
+let highscore = document.getElementsByClassName('highscore')[0]
+
+if (!(localStorage.getItem('HighScore'))) {
+    localStorage.setItem('HighScore', '0')
+}
+
+highscore.innerHTML = 'Highest Score = ' + localStorage.getItem('HighScore')
 
 //Randomly generate 2 in one of the empty box 
 const populate = () => {
@@ -20,7 +27,7 @@ const populate = () => {
         }
     }
     let randInt = Math.floor(Math.random() * arrlen)
-        tile[storeIndex[randInt]].innerHTML = 2;
+    tile[storeIndex[randInt]].innerHTML = 2;
 }
 setTimeout(() => {
     populate()
@@ -28,7 +35,7 @@ setTimeout(() => {
 
 //Check the color of the box 
 const color = () => {
-    let classes = ['red', 'cyan', 'orange', 'darkgoldenrod', 'coral', 'cornflowerblue', 'crismson', 'lightgreen', 'cornsilk', 'darkgreen', 'magenta', 'grey']
+    let classes = ['red', 'cyan', 'orange', 'darkgoldenrod', 'coral', 'cornflowerblue', 'crimson', 'lightgreen', 'cornsilk', 'darkgreen', 'magenta', 'grey']
     Array.from(document.getElementsByClassName('tile')).forEach(element => {
         classes.forEach(e => {
             element.classList.remove(e)
@@ -75,6 +82,17 @@ setTimeout(() => {
     color()
 }, 101);
 
+//Checking highscore 
+const checkHighscore = () => {
+    let prevHighscore = parseInt(localStorage.getItem('HighScore'))
+    console.log(prevHighscore)
+    if (points > prevHighscore) {
+        alert('Congrats!! You have created a new, HIGH SCORE = ' + points)
+        localStorage.setItem('HighScore', `${points}`)
+        highscore.innerHTML = 'Highest Score = ' + points
+    }
+}
+
 //Checking if the game has ended 
 const gameover = () => {
     let lindex, rindex, uindex, dindex
@@ -99,6 +117,7 @@ const gameover = () => {
         }
     }
     if (checkAlert) {
+        checkHighscore()
         setTimeout(() => {
             alert("The Game has ENDED!! Your Total Score is " + points)
         }, 500);
@@ -243,7 +262,6 @@ const move = () => {
                     break;
                 }
                 if (tile[indarr[m]].innerHTML === '') {
-                    console.log('hel')
                     if (tile[indarr[nextind]].innerHTML !== '') {
                         tile[indarr[m]].innerHTML = tile[indarr[nextind]].innerHTML
                         tile[indarr[nextind]].innerHTML = ''
@@ -303,7 +321,6 @@ const move = () => {
                     break;
                 }
                 if (tile[indarr[m]].innerHTML === '') {
-                    console.log('hel')
                     if (tile[indarr[nextind]].innerHTML !== '') {
                         tile[indarr[m]].innerHTML = tile[indarr[nextind]].innerHTML
                         tile[indarr[nextind]].innerHTML = ''
@@ -344,20 +361,17 @@ const move = () => {
 }
 move()
 
-const reset = () => {
-    let restart = document.getElementById('restart')
-    restart.addEventListener("click", () => {
-        tile.forEach(element => {
-            element.innerHTML = ''
-            points = 0;
-            score.innerHTML = 'Score = ' + points;
-
-        });
+let restart = document.getElementById('restart')
+restart.addEventListener("click", () => {
+    checkHighscore()
+    tile.forEach(element => {
+        element.innerHTML = ''
+        points = 0;
+        score.innerHTML = 'Score = ' + points;
+    });
+    color()
+    setTimeout(() => {
+        populate()
         color()
-        setTimeout(() => {
-            populate()
-            color()
-        }, 500);
-    })
-}
-reset()
+    }, 500);
+})

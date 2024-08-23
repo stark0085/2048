@@ -32,6 +32,11 @@ header {
     font-size: 2vw;
     padding: 0.5vw;
     border-radius: 1vw;
+    width: 15vw;
+}
+
+.highscore{
+    width: 20vw;
 }
 
 #restart {
@@ -84,7 +89,6 @@ header {
 
 .cyan {
     background-color: cyan;
-    color: black;
 }
 
 .orange {
@@ -181,6 +185,11 @@ header {
         width: 20vw;
         height: 4vw;
         font-size: 2.7vw;
+    }
+
+    .highscore{
+        font-size: 2.3vw;
+        width: 22vw;
     }
 
     #restart {
